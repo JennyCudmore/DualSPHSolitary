@@ -20,7 +20,7 @@
             <definition dp="0.005" comment="Initial inter-particle distance" units_comment="metres (m)">
                 <pointref x="0" y="0" z="0" />
                 <pointmin x="-1" y="0" z="-1" />
-                <pointmax x="40" y="0" z="1" />
+                <pointmax x="40" y="0" z="1" /> <!--gives area where particles are allowed-->
             </definition>
             <commands>
                 <mainlist>
@@ -28,22 +28,18 @@
                     <setdrawmode mode="full" />
                     <setmkbound mk="10" />
                     <drawbox>
-                        <boxfill>solid</boxfill>
+                        <boxfill>solid</boxfill> <!--draws the piston-->
                         <point x="-0.02" y="-1" z="0" />
                         <size x="0.02" y="2" z="0.8" />
                     </drawbox>
                     <setdrawmode mode="face" />
                     <setmkbound mk="0" />
-                    <drawprism mask="1 | 2 | 3 | 6">
-                        <point x="-0.1" y="-1" z="0.4" />
-                        <point x="-0.1" y="-1" z="0" />
-                        <point x="11" y="-1" z="0" />
-                        <point x="12" y="-1" z="0.4" />
-                        <point x="-0.1" y="1" z="0.4" />
-                        <point x="-0.1" y="1" z="0" />
-                        <point x="11" y="1" z="0" />
-                        <point x="12" y="1" z="0.4" />
-                    </drawprism>
+                    <drawbox> <!--creating the wave tank-->
+                        <boxfill>bottom|left|right</boxfill> <!-- draws box with only bottom, left, right faces-->
+                        <point x="-0.01" y="-1" z="0" />
+                        <size x="32" y="1" z="0.45" />
+                    </drawbox>
+
                     <setmkfluid mk="0" />
                     <fillbox x="0.25" y="0" z="0.02">
                         <modefill>void</modefill>
