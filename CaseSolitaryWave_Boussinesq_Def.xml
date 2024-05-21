@@ -20,7 +20,7 @@
             <definition dp="0.005" comment="Initial inter-particle distance" units_comment="metres (m)">
                 <pointref x="0" y="0" z="0" />
                 <pointmin x="-1" y="0" z="-1" />
-                <pointmax x="22" y="0" z="1" />
+                <pointmax x="40" y="0" z="1" />
             </definition>
             <commands>
                 <mainlist>
