@@ -64,8 +64,8 @@
                     <mkbound value="10" comment="Mk-Bound of selected particles" />
                     <theory value="2" comment="Theory of generation 1:Rayleigh (Serre 1953), 2: Boussinesq (Goring 1978) 3: KdV (Clamond and Germain 1999) (def=2)" />
                     <start value="0" comment="Start time (def=0)" />
-                    <depth value="0.4" comment="Water depth" />
-                    <waveheight value="0.12" comment="Wave height" />
+                    <depth value="0.15" comment="Water depth" />
+                    <waveheight value="0.05" comment="Wave height" />
                     <durationcoef value="1" comment="Coefficient of movement duration (def=1)" />
                     <pistondir x="1" y="0" z="0" comment="Movement direction (def=(1,0,0))" />
                     <savemotion time="6" timedt="0.02" xpos="8" comment="Saves motion data. xpos is optional for elevation calculation" />
