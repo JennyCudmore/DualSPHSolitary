@@ -17,14 +17,15 @@
             <mkorientfluid mk="0" orient="Xyz" />
         </mkconfig>
         <geometry>
-            <definition dp="0.005" comment="Initial inter-particle distance" units_comment="metres (m)">
+            <definition dp="0.002" comment="Initial inter-particle distance" units_comment="metres (m)">
                 <pointref x="0" y="0" z="0" />
-                <pointmin x="-1" y="-0.1" z="-0.1" />
-                <pointmax x="33" y="0.6" z="0.5" /> <!--gives area where particles are allowed-->
+                <pointmin x="-1" y="-1.1" z="-1" />
+                <pointmax x="6" y="3" z="1" /> <!--gives area where particles are allowed-->
             </definition>
             <commands>
                 <mainlist>
                     <setshapemode>real | bound</setshapemode>
+
                     <setdrawmode mode="full" />
                     <setmkbound mk="10" />
                     <drawbox>
@@ -32,32 +33,1990 @@
                         <point x="-0.02" y="-1" z="0" />
                         <size x="0.02" y="2" z="0.8" />
                     </drawbox>
+
+
+
                     <setdrawmode mode="face" />
                     <setmkbound mk="0" />
                     <drawbox> <!--creating the wave tank-->
-                        <boxfill>bottom|left|right</boxfill> <!-- draws box with only bottom, left, right faces-->
-                        <point x="-0.01" y="0" z="0" />
-                        <size x="32" y="0.55" z="0.45" />
+                        <boxfill>bottom|left|right|back|front</boxfill> <!-- draws box without a top -->
+                        <point x="0" y="0" z="0" />
+                        <size x="5" y="0.55" z="0.45" />
                     </drawbox>
 
+
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.5 " y=" 0.0175 " z="0"/>
+			<point x=" 3.5 " y=" 0.0175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.5 " y=" 0.0475 " z="0"/>
+			<point x=" 3.5 " y=" 0.0475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.5 " y=" 0.0775 " z="0"/>
+			<point x=" 3.5 " y=" 0.0775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.5 " y=" 0.1075 " z="0"/>
+			<point x=" 3.5 " y=" 0.1075 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.5 " y=" 0.1375 " z="0"/>
+			<point x=" 3.5 " y=" 0.1375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.5 " y=" 0.16749999999999998 " z="0"/>
+			<point x=" 3.5 " y=" 0.16749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.5 " y=" 0.1975 " z="0"/>
+			<point x=" 3.5 " y=" 0.1975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.5 " y=" 0.22749999999999998 " z="0"/>
+			<point x=" 3.5 " y=" 0.22749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.5 " y=" 0.2575 " z="0"/>
+			<point x=" 3.5 " y=" 0.2575 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.5 " y=" 0.28750000000000003 " z="0"/>
+			<point x=" 3.5 " y=" 0.28750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.5 " y=" 0.3175 " z="0"/>
+			<point x=" 3.5 " y=" 0.3175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.5 " y=" 0.3475 " z="0"/>
+			<point x=" 3.5 " y=" 0.3475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.5 " y=" 0.3775 " z="0"/>
+			<point x=" 3.5 " y=" 0.3775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.5 " y=" 0.40750000000000003 " z="0"/>
+			<point x=" 3.5 " y=" 0.40750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.5 " y=" 0.4375 " z="0"/>
+			<point x=" 3.5 " y=" 0.4375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.5 " y=" 0.46749999999999997 " z="0"/>
+			<point x=" 3.5 " y=" 0.46749999999999997 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.5 " y=" 0.4975 " z="0"/>
+			<point x=" 3.5 " y=" 0.4975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.5 " y=" 0.5275 " z="0"/>
+			<point x=" 3.5 " y=" 0.5275 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.53 " y=" 0.0175 " z="0"/>
+			<point x=" 3.53 " y=" 0.0175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.53 " y=" 0.0475 " z="0"/>
+			<point x=" 3.53 " y=" 0.0475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.53 " y=" 0.0775 " z="0"/>
+			<point x=" 3.53 " y=" 0.0775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.53 " y=" 0.1075 " z="0"/>
+			<point x=" 3.53 " y=" 0.1075 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.53 " y=" 0.1375 " z="0"/>
+			<point x=" 3.53 " y=" 0.1375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.53 " y=" 0.16749999999999998 " z="0"/>
+			<point x=" 3.53 " y=" 0.16749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.53 " y=" 0.1975 " z="0"/>
+			<point x=" 3.53 " y=" 0.1975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.53 " y=" 0.22749999999999998 " z="0"/>
+			<point x=" 3.53 " y=" 0.22749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.53 " y=" 0.2575 " z="0"/>
+			<point x=" 3.53 " y=" 0.2575 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.53 " y=" 0.28750000000000003 " z="0"/>
+			<point x=" 3.53 " y=" 0.28750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.53 " y=" 0.3175 " z="0"/>
+			<point x=" 3.53 " y=" 0.3175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.53 " y=" 0.3475 " z="0"/>
+			<point x=" 3.53 " y=" 0.3475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.53 " y=" 0.3775 " z="0"/>
+			<point x=" 3.53 " y=" 0.3775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.53 " y=" 0.40750000000000003 " z="0"/>
+			<point x=" 3.53 " y=" 0.40750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.53 " y=" 0.4375 " z="0"/>
+			<point x=" 3.53 " y=" 0.4375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.53 " y=" 0.46749999999999997 " z="0"/>
+			<point x=" 3.53 " y=" 0.46749999999999997 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.53 " y=" 0.4975 " z="0"/>
+			<point x=" 3.53 " y=" 0.4975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.53 " y=" 0.5275 " z="0"/>
+			<point x=" 3.53 " y=" 0.5275 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.56 " y=" 0.0175 " z="0"/>
+			<point x=" 3.56 " y=" 0.0175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.56 " y=" 0.0475 " z="0"/>
+			<point x=" 3.56 " y=" 0.0475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.56 " y=" 0.0775 " z="0"/>
+			<point x=" 3.56 " y=" 0.0775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.56 " y=" 0.1075 " z="0"/>
+			<point x=" 3.56 " y=" 0.1075 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.56 " y=" 0.1375 " z="0"/>
+			<point x=" 3.56 " y=" 0.1375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.56 " y=" 0.16749999999999998 " z="0"/>
+			<point x=" 3.56 " y=" 0.16749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.56 " y=" 0.1975 " z="0"/>
+			<point x=" 3.56 " y=" 0.1975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.56 " y=" 0.22749999999999998 " z="0"/>
+			<point x=" 3.56 " y=" 0.22749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.56 " y=" 0.2575 " z="0"/>
+			<point x=" 3.56 " y=" 0.2575 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.56 " y=" 0.28750000000000003 " z="0"/>
+			<point x=" 3.56 " y=" 0.28750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.56 " y=" 0.3175 " z="0"/>
+			<point x=" 3.56 " y=" 0.3175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.56 " y=" 0.3475 " z="0"/>
+			<point x=" 3.56 " y=" 0.3475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.56 " y=" 0.3775 " z="0"/>
+			<point x=" 3.56 " y=" 0.3775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.56 " y=" 0.40750000000000003 " z="0"/>
+			<point x=" 3.56 " y=" 0.40750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.56 " y=" 0.4375 " z="0"/>
+			<point x=" 3.56 " y=" 0.4375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.56 " y=" 0.46749999999999997 " z="0"/>
+			<point x=" 3.56 " y=" 0.46749999999999997 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.56 " y=" 0.4975 " z="0"/>
+			<point x=" 3.56 " y=" 0.4975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.56 " y=" 0.5275 " z="0"/>
+			<point x=" 3.56 " y=" 0.5275 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.59 " y=" 0.0175 " z="0"/>
+			<point x=" 3.59 " y=" 0.0175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.59 " y=" 0.0475 " z="0"/>
+			<point x=" 3.59 " y=" 0.0475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.59 " y=" 0.0775 " z="0"/>
+			<point x=" 3.59 " y=" 0.0775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.59 " y=" 0.1075 " z="0"/>
+			<point x=" 3.59 " y=" 0.1075 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.59 " y=" 0.1375 " z="0"/>
+			<point x=" 3.59 " y=" 0.1375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.59 " y=" 0.16749999999999998 " z="0"/>
+			<point x=" 3.59 " y=" 0.16749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.59 " y=" 0.1975 " z="0"/>
+			<point x=" 3.59 " y=" 0.1975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.59 " y=" 0.22749999999999998 " z="0"/>
+			<point x=" 3.59 " y=" 0.22749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.59 " y=" 0.2575 " z="0"/>
+			<point x=" 3.59 " y=" 0.2575 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.59 " y=" 0.28750000000000003 " z="0"/>
+			<point x=" 3.59 " y=" 0.28750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.59 " y=" 0.3175 " z="0"/>
+			<point x=" 3.59 " y=" 0.3175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.59 " y=" 0.3475 " z="0"/>
+			<point x=" 3.59 " y=" 0.3475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.59 " y=" 0.3775 " z="0"/>
+			<point x=" 3.59 " y=" 0.3775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.59 " y=" 0.40750000000000003 " z="0"/>
+			<point x=" 3.59 " y=" 0.40750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.59 " y=" 0.4375 " z="0"/>
+			<point x=" 3.59 " y=" 0.4375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.59 " y=" 0.46749999999999997 " z="0"/>
+			<point x=" 3.59 " y=" 0.46749999999999997 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.59 " y=" 0.4975 " z="0"/>
+			<point x=" 3.59 " y=" 0.4975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.59 " y=" 0.5275 " z="0"/>
+			<point x=" 3.59 " y=" 0.5275 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.62 " y=" 0.0175 " z="0"/>
+			<point x=" 3.62 " y=" 0.0175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.62 " y=" 0.0475 " z="0"/>
+			<point x=" 3.62 " y=" 0.0475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.62 " y=" 0.0775 " z="0"/>
+			<point x=" 3.62 " y=" 0.0775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.62 " y=" 0.1075 " z="0"/>
+			<point x=" 3.62 " y=" 0.1075 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.62 " y=" 0.1375 " z="0"/>
+			<point x=" 3.62 " y=" 0.1375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.62 " y=" 0.16749999999999998 " z="0"/>
+			<point x=" 3.62 " y=" 0.16749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.62 " y=" 0.1975 " z="0"/>
+			<point x=" 3.62 " y=" 0.1975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.62 " y=" 0.22749999999999998 " z="0"/>
+			<point x=" 3.62 " y=" 0.22749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.62 " y=" 0.2575 " z="0"/>
+			<point x=" 3.62 " y=" 0.2575 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.62 " y=" 0.28750000000000003 " z="0"/>
+			<point x=" 3.62 " y=" 0.28750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.62 " y=" 0.3175 " z="0"/>
+			<point x=" 3.62 " y=" 0.3175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.62 " y=" 0.3475 " z="0"/>
+			<point x=" 3.62 " y=" 0.3475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.62 " y=" 0.3775 " z="0"/>
+			<point x=" 3.62 " y=" 0.3775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.62 " y=" 0.40750000000000003 " z="0"/>
+			<point x=" 3.62 " y=" 0.40750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.62 " y=" 0.4375 " z="0"/>
+			<point x=" 3.62 " y=" 0.4375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.62 " y=" 0.46749999999999997 " z="0"/>
+			<point x=" 3.62 " y=" 0.46749999999999997 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.62 " y=" 0.4975 " z="0"/>
+			<point x=" 3.62 " y=" 0.4975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.62 " y=" 0.5275 " z="0"/>
+			<point x=" 3.62 " y=" 0.5275 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.65 " y=" 0.0175 " z="0"/>
+			<point x=" 3.65 " y=" 0.0175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.65 " y=" 0.0475 " z="0"/>
+			<point x=" 3.65 " y=" 0.0475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.65 " y=" 0.0775 " z="0"/>
+			<point x=" 3.65 " y=" 0.0775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.65 " y=" 0.1075 " z="0"/>
+			<point x=" 3.65 " y=" 0.1075 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.65 " y=" 0.1375 " z="0"/>
+			<point x=" 3.65 " y=" 0.1375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.65 " y=" 0.16749999999999998 " z="0"/>
+			<point x=" 3.65 " y=" 0.16749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.65 " y=" 0.1975 " z="0"/>
+			<point x=" 3.65 " y=" 0.1975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.65 " y=" 0.22749999999999998 " z="0"/>
+			<point x=" 3.65 " y=" 0.22749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.65 " y=" 0.2575 " z="0"/>
+			<point x=" 3.65 " y=" 0.2575 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.65 " y=" 0.28750000000000003 " z="0"/>
+			<point x=" 3.65 " y=" 0.28750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.65 " y=" 0.3175 " z="0"/>
+			<point x=" 3.65 " y=" 0.3175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.65 " y=" 0.3475 " z="0"/>
+			<point x=" 3.65 " y=" 0.3475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.65 " y=" 0.3775 " z="0"/>
+			<point x=" 3.65 " y=" 0.3775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.65 " y=" 0.40750000000000003 " z="0"/>
+			<point x=" 3.65 " y=" 0.40750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.65 " y=" 0.4375 " z="0"/>
+			<point x=" 3.65 " y=" 0.4375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.65 " y=" 0.46749999999999997 " z="0"/>
+			<point x=" 3.65 " y=" 0.46749999999999997 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.65 " y=" 0.4975 " z="0"/>
+			<point x=" 3.65 " y=" 0.4975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.65 " y=" 0.5275 " z="0"/>
+			<point x=" 3.65 " y=" 0.5275 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.68 " y=" 0.0175 " z="0"/>
+			<point x=" 3.68 " y=" 0.0175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.68 " y=" 0.0475 " z="0"/>
+			<point x=" 3.68 " y=" 0.0475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.68 " y=" 0.0775 " z="0"/>
+			<point x=" 3.68 " y=" 0.0775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.68 " y=" 0.1075 " z="0"/>
+			<point x=" 3.68 " y=" 0.1075 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.68 " y=" 0.1375 " z="0"/>
+			<point x=" 3.68 " y=" 0.1375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.68 " y=" 0.16749999999999998 " z="0"/>
+			<point x=" 3.68 " y=" 0.16749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.68 " y=" 0.1975 " z="0"/>
+			<point x=" 3.68 " y=" 0.1975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.68 " y=" 0.22749999999999998 " z="0"/>
+			<point x=" 3.68 " y=" 0.22749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.68 " y=" 0.2575 " z="0"/>
+			<point x=" 3.68 " y=" 0.2575 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.68 " y=" 0.28750000000000003 " z="0"/>
+			<point x=" 3.68 " y=" 0.28750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.68 " y=" 0.3175 " z="0"/>
+			<point x=" 3.68 " y=" 0.3175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.68 " y=" 0.3475 " z="0"/>
+			<point x=" 3.68 " y=" 0.3475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.68 " y=" 0.3775 " z="0"/>
+			<point x=" 3.68 " y=" 0.3775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.68 " y=" 0.40750000000000003 " z="0"/>
+			<point x=" 3.68 " y=" 0.40750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.68 " y=" 0.4375 " z="0"/>
+			<point x=" 3.68 " y=" 0.4375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.68 " y=" 0.46749999999999997 " z="0"/>
+			<point x=" 3.68 " y=" 0.46749999999999997 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.68 " y=" 0.4975 " z="0"/>
+			<point x=" 3.68 " y=" 0.4975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.68 " y=" 0.5275 " z="0"/>
+			<point x=" 3.68 " y=" 0.5275 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.71 " y=" 0.0175 " z="0"/>
+			<point x=" 3.71 " y=" 0.0175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.71 " y=" 0.0475 " z="0"/>
+			<point x=" 3.71 " y=" 0.0475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.71 " y=" 0.0775 " z="0"/>
+			<point x=" 3.71 " y=" 0.0775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.71 " y=" 0.1075 " z="0"/>
+			<point x=" 3.71 " y=" 0.1075 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.71 " y=" 0.1375 " z="0"/>
+			<point x=" 3.71 " y=" 0.1375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.71 " y=" 0.16749999999999998 " z="0"/>
+			<point x=" 3.71 " y=" 0.16749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.71 " y=" 0.1975 " z="0"/>
+			<point x=" 3.71 " y=" 0.1975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.71 " y=" 0.22749999999999998 " z="0"/>
+			<point x=" 3.71 " y=" 0.22749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.71 " y=" 0.2575 " z="0"/>
+			<point x=" 3.71 " y=" 0.2575 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.71 " y=" 0.28750000000000003 " z="0"/>
+			<point x=" 3.71 " y=" 0.28750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.71 " y=" 0.3175 " z="0"/>
+			<point x=" 3.71 " y=" 0.3175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.71 " y=" 0.3475 " z="0"/>
+			<point x=" 3.71 " y=" 0.3475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.71 " y=" 0.3775 " z="0"/>
+			<point x=" 3.71 " y=" 0.3775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.71 " y=" 0.40750000000000003 " z="0"/>
+			<point x=" 3.71 " y=" 0.40750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.71 " y=" 0.4375 " z="0"/>
+			<point x=" 3.71 " y=" 0.4375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.71 " y=" 0.46749999999999997 " z="0"/>
+			<point x=" 3.71 " y=" 0.46749999999999997 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.71 " y=" 0.4975 " z="0"/>
+			<point x=" 3.71 " y=" 0.4975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.71 " y=" 0.5275 " z="0"/>
+			<point x=" 3.71 " y=" 0.5275 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.74 " y=" 0.0175 " z="0"/>
+			<point x=" 3.74 " y=" 0.0175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.74 " y=" 0.0475 " z="0"/>
+			<point x=" 3.74 " y=" 0.0475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.74 " y=" 0.0775 " z="0"/>
+			<point x=" 3.74 " y=" 0.0775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.74 " y=" 0.1075 " z="0"/>
+			<point x=" 3.74 " y=" 0.1075 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.74 " y=" 0.1375 " z="0"/>
+			<point x=" 3.74 " y=" 0.1375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.74 " y=" 0.16749999999999998 " z="0"/>
+			<point x=" 3.74 " y=" 0.16749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.74 " y=" 0.1975 " z="0"/>
+			<point x=" 3.74 " y=" 0.1975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.74 " y=" 0.22749999999999998 " z="0"/>
+			<point x=" 3.74 " y=" 0.22749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.74 " y=" 0.2575 " z="0"/>
+			<point x=" 3.74 " y=" 0.2575 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.74 " y=" 0.28750000000000003 " z="0"/>
+			<point x=" 3.74 " y=" 0.28750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.74 " y=" 0.3175 " z="0"/>
+			<point x=" 3.74 " y=" 0.3175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.74 " y=" 0.3475 " z="0"/>
+			<point x=" 3.74 " y=" 0.3475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.74 " y=" 0.3775 " z="0"/>
+			<point x=" 3.74 " y=" 0.3775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.74 " y=" 0.40750000000000003 " z="0"/>
+			<point x=" 3.74 " y=" 0.40750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.74 " y=" 0.4375 " z="0"/>
+			<point x=" 3.74 " y=" 0.4375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.74 " y=" 0.46749999999999997 " z="0"/>
+			<point x=" 3.74 " y=" 0.46749999999999997 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.74 " y=" 0.4975 " z="0"/>
+			<point x=" 3.74 " y=" 0.4975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.74 " y=" 0.5275 " z="0"/>
+			<point x=" 3.74 " y=" 0.5275 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.77 " y=" 0.0175 " z="0"/>
+			<point x=" 3.77 " y=" 0.0175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.77 " y=" 0.0475 " z="0"/>
+			<point x=" 3.77 " y=" 0.0475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.77 " y=" 0.0775 " z="0"/>
+			<point x=" 3.77 " y=" 0.0775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.77 " y=" 0.1075 " z="0"/>
+			<point x=" 3.77 " y=" 0.1075 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.77 " y=" 0.1375 " z="0"/>
+			<point x=" 3.77 " y=" 0.1375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.77 " y=" 0.16749999999999998 " z="0"/>
+			<point x=" 3.77 " y=" 0.16749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.77 " y=" 0.1975 " z="0"/>
+			<point x=" 3.77 " y=" 0.1975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.77 " y=" 0.22749999999999998 " z="0"/>
+			<point x=" 3.77 " y=" 0.22749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.77 " y=" 0.2575 " z="0"/>
+			<point x=" 3.77 " y=" 0.2575 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.77 " y=" 0.28750000000000003 " z="0"/>
+			<point x=" 3.77 " y=" 0.28750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.77 " y=" 0.3175 " z="0"/>
+			<point x=" 3.77 " y=" 0.3175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.77 " y=" 0.3475 " z="0"/>
+			<point x=" 3.77 " y=" 0.3475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.77 " y=" 0.3775 " z="0"/>
+			<point x=" 3.77 " y=" 0.3775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.77 " y=" 0.40750000000000003 " z="0"/>
+			<point x=" 3.77 " y=" 0.40750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.77 " y=" 0.4375 " z="0"/>
+			<point x=" 3.77 " y=" 0.4375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.77 " y=" 0.46749999999999997 " z="0"/>
+			<point x=" 3.77 " y=" 0.46749999999999997 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.77 " y=" 0.4975 " z="0"/>
+			<point x=" 3.77 " y=" 0.4975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.77 " y=" 0.5275 " z="0"/>
+			<point x=" 3.77 " y=" 0.5275 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.8 " y=" 0.0175 " z="0"/>
+			<point x=" 3.8 " y=" 0.0175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.8 " y=" 0.0475 " z="0"/>
+			<point x=" 3.8 " y=" 0.0475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.8 " y=" 0.0775 " z="0"/>
+			<point x=" 3.8 " y=" 0.0775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.8 " y=" 0.1075 " z="0"/>
+			<point x=" 3.8 " y=" 0.1075 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.8 " y=" 0.1375 " z="0"/>
+			<point x=" 3.8 " y=" 0.1375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.8 " y=" 0.16749999999999998 " z="0"/>
+			<point x=" 3.8 " y=" 0.16749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.8 " y=" 0.1975 " z="0"/>
+			<point x=" 3.8 " y=" 0.1975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.8 " y=" 0.22749999999999998 " z="0"/>
+			<point x=" 3.8 " y=" 0.22749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.8 " y=" 0.2575 " z="0"/>
+			<point x=" 3.8 " y=" 0.2575 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.8 " y=" 0.28750000000000003 " z="0"/>
+			<point x=" 3.8 " y=" 0.28750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.8 " y=" 0.3175 " z="0"/>
+			<point x=" 3.8 " y=" 0.3175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.8 " y=" 0.3475 " z="0"/>
+			<point x=" 3.8 " y=" 0.3475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.8 " y=" 0.3775 " z="0"/>
+			<point x=" 3.8 " y=" 0.3775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.8 " y=" 0.40750000000000003 " z="0"/>
+			<point x=" 3.8 " y=" 0.40750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.8 " y=" 0.4375 " z="0"/>
+			<point x=" 3.8 " y=" 0.4375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.8 " y=" 0.46749999999999997 " z="0"/>
+			<point x=" 3.8 " y=" 0.46749999999999997 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.8 " y=" 0.4975 " z="0"/>
+			<point x=" 3.8 " y=" 0.4975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.8 " y=" 0.5275 " z="0"/>
+			<point x=" 3.8 " y=" 0.5275 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.83 " y=" 0.0175 " z="0"/>
+			<point x=" 3.83 " y=" 0.0175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.83 " y=" 0.0475 " z="0"/>
+			<point x=" 3.83 " y=" 0.0475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.83 " y=" 0.0775 " z="0"/>
+			<point x=" 3.83 " y=" 0.0775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.83 " y=" 0.1075 " z="0"/>
+			<point x=" 3.83 " y=" 0.1075 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.83 " y=" 0.1375 " z="0"/>
+			<point x=" 3.83 " y=" 0.1375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.83 " y=" 0.16749999999999998 " z="0"/>
+			<point x=" 3.83 " y=" 0.16749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.83 " y=" 0.1975 " z="0"/>
+			<point x=" 3.83 " y=" 0.1975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.83 " y=" 0.22749999999999998 " z="0"/>
+			<point x=" 3.83 " y=" 0.22749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.83 " y=" 0.2575 " z="0"/>
+			<point x=" 3.83 " y=" 0.2575 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.83 " y=" 0.28750000000000003 " z="0"/>
+			<point x=" 3.83 " y=" 0.28750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.83 " y=" 0.3175 " z="0"/>
+			<point x=" 3.83 " y=" 0.3175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.83 " y=" 0.3475 " z="0"/>
+			<point x=" 3.83 " y=" 0.3475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.83 " y=" 0.3775 " z="0"/>
+			<point x=" 3.83 " y=" 0.3775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.83 " y=" 0.40750000000000003 " z="0"/>
+			<point x=" 3.83 " y=" 0.40750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.83 " y=" 0.4375 " z="0"/>
+			<point x=" 3.83 " y=" 0.4375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.83 " y=" 0.46749999999999997 " z="0"/>
+			<point x=" 3.83 " y=" 0.46749999999999997 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.83 " y=" 0.4975 " z="0"/>
+			<point x=" 3.83 " y=" 0.4975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.83 " y=" 0.5275 " z="0"/>
+			<point x=" 3.83 " y=" 0.5275 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.86 " y=" 0.0175 " z="0"/>
+			<point x=" 3.86 " y=" 0.0175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.86 " y=" 0.0475 " z="0"/>
+			<point x=" 3.86 " y=" 0.0475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.86 " y=" 0.0775 " z="0"/>
+			<point x=" 3.86 " y=" 0.0775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.86 " y=" 0.1075 " z="0"/>
+			<point x=" 3.86 " y=" 0.1075 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.86 " y=" 0.1375 " z="0"/>
+			<point x=" 3.86 " y=" 0.1375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.86 " y=" 0.16749999999999998 " z="0"/>
+			<point x=" 3.86 " y=" 0.16749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.86 " y=" 0.1975 " z="0"/>
+			<point x=" 3.86 " y=" 0.1975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.86 " y=" 0.22749999999999998 " z="0"/>
+			<point x=" 3.86 " y=" 0.22749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.86 " y=" 0.2575 " z="0"/>
+			<point x=" 3.86 " y=" 0.2575 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.86 " y=" 0.28750000000000003 " z="0"/>
+			<point x=" 3.86 " y=" 0.28750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.86 " y=" 0.3175 " z="0"/>
+			<point x=" 3.86 " y=" 0.3175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.86 " y=" 0.3475 " z="0"/>
+			<point x=" 3.86 " y=" 0.3475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.86 " y=" 0.3775 " z="0"/>
+			<point x=" 3.86 " y=" 0.3775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.86 " y=" 0.40750000000000003 " z="0"/>
+			<point x=" 3.86 " y=" 0.40750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.86 " y=" 0.4375 " z="0"/>
+			<point x=" 3.86 " y=" 0.4375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.86 " y=" 0.46749999999999997 " z="0"/>
+			<point x=" 3.86 " y=" 0.46749999999999997 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.86 " y=" 0.4975 " z="0"/>
+			<point x=" 3.86 " y=" 0.4975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.86 " y=" 0.5275 " z="0"/>
+			<point x=" 3.86 " y=" 0.5275 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.89 " y=" 0.0175 " z="0"/>
+			<point x=" 3.89 " y=" 0.0175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.89 " y=" 0.0475 " z="0"/>
+			<point x=" 3.89 " y=" 0.0475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.89 " y=" 0.0775 " z="0"/>
+			<point x=" 3.89 " y=" 0.0775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.89 " y=" 0.1075 " z="0"/>
+			<point x=" 3.89 " y=" 0.1075 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.89 " y=" 0.1375 " z="0"/>
+			<point x=" 3.89 " y=" 0.1375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.89 " y=" 0.16749999999999998 " z="0"/>
+			<point x=" 3.89 " y=" 0.16749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.89 " y=" 0.1975 " z="0"/>
+			<point x=" 3.89 " y=" 0.1975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.89 " y=" 0.22749999999999998 " z="0"/>
+			<point x=" 3.89 " y=" 0.22749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.89 " y=" 0.2575 " z="0"/>
+			<point x=" 3.89 " y=" 0.2575 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.89 " y=" 0.28750000000000003 " z="0"/>
+			<point x=" 3.89 " y=" 0.28750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.89 " y=" 0.3175 " z="0"/>
+			<point x=" 3.89 " y=" 0.3175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.89 " y=" 0.3475 " z="0"/>
+			<point x=" 3.89 " y=" 0.3475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.89 " y=" 0.3775 " z="0"/>
+			<point x=" 3.89 " y=" 0.3775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.89 " y=" 0.40750000000000003 " z="0"/>
+			<point x=" 3.89 " y=" 0.40750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.89 " y=" 0.4375 " z="0"/>
+			<point x=" 3.89 " y=" 0.4375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.89 " y=" 0.46749999999999997 " z="0"/>
+			<point x=" 3.89 " y=" 0.46749999999999997 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.89 " y=" 0.4975 " z="0"/>
+			<point x=" 3.89 " y=" 0.4975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.89 " y=" 0.5275 " z="0"/>
+			<point x=" 3.89 " y=" 0.5275 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.92 " y=" 0.0175 " z="0"/>
+			<point x=" 3.92 " y=" 0.0175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.92 " y=" 0.0475 " z="0"/>
+			<point x=" 3.92 " y=" 0.0475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.92 " y=" 0.0775 " z="0"/>
+			<point x=" 3.92 " y=" 0.0775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.92 " y=" 0.1075 " z="0"/>
+			<point x=" 3.92 " y=" 0.1075 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.92 " y=" 0.1375 " z="0"/>
+			<point x=" 3.92 " y=" 0.1375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.92 " y=" 0.16749999999999998 " z="0"/>
+			<point x=" 3.92 " y=" 0.16749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.92 " y=" 0.1975 " z="0"/>
+			<point x=" 3.92 " y=" 0.1975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.92 " y=" 0.22749999999999998 " z="0"/>
+			<point x=" 3.92 " y=" 0.22749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.92 " y=" 0.2575 " z="0"/>
+			<point x=" 3.92 " y=" 0.2575 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.92 " y=" 0.28750000000000003 " z="0"/>
+			<point x=" 3.92 " y=" 0.28750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.92 " y=" 0.3175 " z="0"/>
+			<point x=" 3.92 " y=" 0.3175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.92 " y=" 0.3475 " z="0"/>
+			<point x=" 3.92 " y=" 0.3475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.92 " y=" 0.3775 " z="0"/>
+			<point x=" 3.92 " y=" 0.3775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.92 " y=" 0.40750000000000003 " z="0"/>
+			<point x=" 3.92 " y=" 0.40750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.92 " y=" 0.4375 " z="0"/>
+			<point x=" 3.92 " y=" 0.4375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.92 " y=" 0.46749999999999997 " z="0"/>
+			<point x=" 3.92 " y=" 0.46749999999999997 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.92 " y=" 0.4975 " z="0"/>
+			<point x=" 3.92 " y=" 0.4975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.92 " y=" 0.5275 " z="0"/>
+			<point x=" 3.92 " y=" 0.5275 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.95 " y=" 0.0175 " z="0"/>
+			<point x=" 3.95 " y=" 0.0175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.95 " y=" 0.0475 " z="0"/>
+			<point x=" 3.95 " y=" 0.0475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.95 " y=" 0.0775 " z="0"/>
+			<point x=" 3.95 " y=" 0.0775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.95 " y=" 0.1075 " z="0"/>
+			<point x=" 3.95 " y=" 0.1075 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.95 " y=" 0.1375 " z="0"/>
+			<point x=" 3.95 " y=" 0.1375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.95 " y=" 0.16749999999999998 " z="0"/>
+			<point x=" 3.95 " y=" 0.16749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.95 " y=" 0.1975 " z="0"/>
+			<point x=" 3.95 " y=" 0.1975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.95 " y=" 0.22749999999999998 " z="0"/>
+			<point x=" 3.95 " y=" 0.22749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.95 " y=" 0.2575 " z="0"/>
+			<point x=" 3.95 " y=" 0.2575 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.95 " y=" 0.28750000000000003 " z="0"/>
+			<point x=" 3.95 " y=" 0.28750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.95 " y=" 0.3175 " z="0"/>
+			<point x=" 3.95 " y=" 0.3175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.95 " y=" 0.3475 " z="0"/>
+			<point x=" 3.95 " y=" 0.3475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.95 " y=" 0.3775 " z="0"/>
+			<point x=" 3.95 " y=" 0.3775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.95 " y=" 0.40750000000000003 " z="0"/>
+			<point x=" 3.95 " y=" 0.40750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.95 " y=" 0.4375 " z="0"/>
+			<point x=" 3.95 " y=" 0.4375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.95 " y=" 0.46749999999999997 " z="0"/>
+			<point x=" 3.95 " y=" 0.46749999999999997 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.95 " y=" 0.4975 " z="0"/>
+			<point x=" 3.95 " y=" 0.4975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.95 " y=" 0.5275 " z="0"/>
+			<point x=" 3.95 " y=" 0.5275 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.98 " y=" 0.0175 " z="0"/>
+			<point x=" 3.98 " y=" 0.0175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.98 " y=" 0.0475 " z="0"/>
+			<point x=" 3.98 " y=" 0.0475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.98 " y=" 0.0775 " z="0"/>
+			<point x=" 3.98 " y=" 0.0775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.98 " y=" 0.1075 " z="0"/>
+			<point x=" 3.98 " y=" 0.1075 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.98 " y=" 0.1375 " z="0"/>
+			<point x=" 3.98 " y=" 0.1375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.98 " y=" 0.16749999999999998 " z="0"/>
+			<point x=" 3.98 " y=" 0.16749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.98 " y=" 0.1975 " z="0"/>
+			<point x=" 3.98 " y=" 0.1975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.98 " y=" 0.22749999999999998 " z="0"/>
+			<point x=" 3.98 " y=" 0.22749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.98 " y=" 0.2575 " z="0"/>
+			<point x=" 3.98 " y=" 0.2575 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.98 " y=" 0.28750000000000003 " z="0"/>
+			<point x=" 3.98 " y=" 0.28750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.98 " y=" 0.3175 " z="0"/>
+			<point x=" 3.98 " y=" 0.3175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.98 " y=" 0.3475 " z="0"/>
+			<point x=" 3.98 " y=" 0.3475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.98 " y=" 0.3775 " z="0"/>
+			<point x=" 3.98 " y=" 0.3775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.98 " y=" 0.40750000000000003 " z="0"/>
+			<point x=" 3.98 " y=" 0.40750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.98 " y=" 0.4375 " z="0"/>
+			<point x=" 3.98 " y=" 0.4375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.98 " y=" 0.46749999999999997 " z="0"/>
+			<point x=" 3.98 " y=" 0.46749999999999997 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.98 " y=" 0.4975 " z="0"/>
+			<point x=" 3.98 " y=" 0.4975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 3.98 " y=" 0.5275 " z="0"/>
+			<point x=" 3.98 " y=" 0.5275 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 4.01 " y=" 0.0175 " z="0"/>
+			<point x=" 4.01 " y=" 0.0175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 4.01 " y=" 0.0475 " z="0"/>
+			<point x=" 4.01 " y=" 0.0475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 4.01 " y=" 0.0775 " z="0"/>
+			<point x=" 4.01 " y=" 0.0775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 4.01 " y=" 0.1075 " z="0"/>
+			<point x=" 4.01 " y=" 0.1075 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 4.01 " y=" 0.1375 " z="0"/>
+			<point x=" 4.01 " y=" 0.1375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 4.01 " y=" 0.16749999999999998 " z="0"/>
+			<point x=" 4.01 " y=" 0.16749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 4.01 " y=" 0.1975 " z="0"/>
+			<point x=" 4.01 " y=" 0.1975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 4.01 " y=" 0.22749999999999998 " z="0"/>
+			<point x=" 4.01 " y=" 0.22749999999999998 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 4.01 " y=" 0.2575 " z="0"/>
+			<point x=" 4.01 " y=" 0.2575 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 4.01 " y=" 0.28750000000000003 " z="0"/>
+			<point x=" 4.01 " y=" 0.28750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 4.01 " y=" 0.3175 " z="0"/>
+			<point x=" 4.01 " y=" 0.3175 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 4.01 " y=" 0.3475 " z="0"/>
+			<point x=" 4.01 " y=" 0.3475 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 4.01 " y=" 0.3775 " z="0"/>
+			<point x=" 4.01 " y=" 0.3775 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 4.01 " y=" 0.40750000000000003 " z="0"/>
+			<point x=" 4.01 " y=" 0.40750000000000003 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 4.01 " y=" 0.4375 " z="0"/>
+			<point x=" 4.01 " y=" 0.4375 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 4.01 " y=" 0.46749999999999997 " z="0"/>
+			<point x=" 4.01 " y=" 0.46749999999999997 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 4.01 " y=" 0.4975 " z="0"/>
+			<point x=" 4.01 " y=" 0.4975 " z="0.45"/>
+			</drawcylinder>
+			<!--  CYLINDER  -->
+			<setmkbound mk="0"/>
+				<drawcylinder radius="0.01">
+				<point x=" 4.01 " y=" 0.5275 " z="0"/>
+			<point x=" 4.01 " y=" 0.5275 " z="0.45"/>
+			</drawcylinder>
+
+
+
                     <setmkfluid mk="0" />
-                    <fillbox x="0.25" y="0" z="0.02">
-                        <modefill>void</modefill>
-                        <point x="-1" y="-1" z="-1" />
-                        <size x="40" y="2" z="1.15" />
+                    <fillbox x="0.25" y="0.2" z="0.1">
+                        <modefill>border|bound</modefill>
+                        <point x="0" y="0" z="0"/>
+                        <size x="5" y="0.55" z="0.15"/>
                     </fillbox>
                     <shapeout file="" reset="true" />
                 </mainlist>
             </commands>
         </geometry>
+
+
         <motion>
             <objreal ref="10">
                 <begin mov="1" start="0" />
                 <mvnull id="1" />
             </objreal>
         </motion>
+
+
+
     </casedef>
     <execution>
+
+
         <special>
             <wavepaddles>
                 <piston_solitary>
@@ -72,13 +2031,15 @@
                 </piston_solitary>
             </wavepaddles>
         </special>
+
+
         <parameters>
             <parameter key="SavePosDouble" value="0" comment="Saves particle position using double precision (default=0)" />
             <parameter key="StepAlgorithm" value="2" comment="Step Algorithm 1:Verlet, 2:Symplectic (default=1)" />
             <parameter key="VerletSteps" value="40" comment="Verlet only: Number of steps to apply Euler timestepping (default=40)" />
             <parameter key="Kernel" value="2" comment="Interaction Kernel 1:Cubic Spline, 2:Wendland, 3:Gaussian (default=2)" />
-            <parameter key="ViscoTreatment" value="1" comment="Viscosity formulation 1:Artificial, 2:Laminar+SPS (default=1)" />
-            <parameter key="Visco" value="0.01" comment="Viscosity value" />
+            <parameter key="ViscoTreatment" value="2" comment="Viscosity formulation 1:Artificial, 2:Laminar+SPS (default=1)" />
+            <parameter key="Visco" value="0.000001" comment="Viscosity value" />
             <parameter key="ViscoBoundFactor" value="0" comment="Multiply viscosity value with boundary (default=1)" />
 			<parameter key="DensityDT" value="2" comment="Density Diffusion Term 0:None, 1:Molteni, 2:Fourtakas, 3:Fourtakas(full) (default=0)" />
 			<parameter key="DensityDTvalue" value="0.1" comment="DDT value (default=0.1)" />
@@ -91,7 +2052,7 @@
             <parameter key="DtFixed" value="0" comment="Fixed Dt value. Use 0 to disable (default=disabled)" units_comment="seconds" />
             <parameter key="DtFixedFile" value="NONE" comment="Dt values are loaded from file. Use NONE to disable (default=disabled)" units_comment="milliseconds (ms)" />
             <parameter key="DtAllParticles" value="0" comment="Velocity of particles used to calculate DT. 1:All, 0:Only fluid/floating (default=0)" />
-            <parameter key="TimeMax" value="6" comment="Time of simulation" units_comment="seconds" />
+            <parameter key="TimeMax" value="5" comment="Time of simulation" units_comment="seconds" />
             <parameter key="TimeOut" value="0.02" comment="Time out data" units_comment="seconds" />
             <parameter key="RhopOutMin" value="700" comment="Minimum rhop valid (default=700)" units_comment="kg/m^3" />
             <parameter key="RhopOutMax" value="1300" comment="Maximum rhop valid (default=1300)" units_comment="kg/m^3" />
