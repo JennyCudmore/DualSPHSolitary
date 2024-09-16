@@ -347,11 +347,19 @@
                     <normal x="0" y="0" z="1" />
                     <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
                 </boundnormal_plane>
+
                 <boundnormal_plane mkbound="2">
 					<point auto="true" comment="Point is calculated automatically accoding to normal configuration." />
                     <normal x="0" y="0" z="-1" />
                     <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
                 </boundnormal_plane>
+
+                <boundnormal_plane mkbound="3">
+					<point auto="true" comment="Point is calculated automatically accoding to normal configuration." />
+                    <normal x="1" y="0" z="0" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_plane>
+
             </initialize>
         </special>
         <parameters>
