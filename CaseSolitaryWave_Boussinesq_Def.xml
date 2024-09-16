@@ -38,7 +38,7 @@
 
                     <!--draws the piston-->
                     <setdrawmode mode="full" />
-                    <setmkbound mk="3" />
+                    <setmkbound mk="1" />
                     <drawbox>
                         <boxfill>solid</boxfill> 
                         <point x="-0.02" y="-1" z="0" />
@@ -46,14 +46,54 @@
                     </drawbox>
 
 
-                    <!-- draws box without a top -->
-                    <setdrawmode mode="face" />
-                    <setmkbound mk="1" />
-                    <drawbox> <!--creating the wave tank-->
-                        <boxfill>bottom|left|right|back|front</boxfill> 
+
+
+                    <!-- DRAWING TANK -->
+                    <setdrawmode mode="full" />
+
+        			<!-- Left side of the tank -->
+                    <setmkbound mk="2" />
+                    <drawbox>
+                        <boxfill>left</boxfill>
                         <point x="0" y="0" z="0" />
-                        <size x="5" y="0.55" z="0.45" />
+                        <endpoint x="0" y="0.55" z="0.45" />
+                        <layers vdp="0,1,2" />
                     </drawbox>
+
+        			<!-- Right side of the tank -->
+                    <setmkbound mk="3" />
+                    <drawbox>
+                        <boxfill>left</boxfill>
+                        <point x="5" y="0" z="0" />
+                        <endpoint x="5" y="0.55" z="0.45" />
+                        <layers vdp="0,1,2" />
+                    </drawbox>
+
+
+        			<!-- Front side of the tank -->
+                    <setmkbound mk="4" />
+                    <drawbox>
+                        <boxfill>left</boxfill>
+                        <point x="0" y="0" z="0" />
+                        <endpoint x="5" y="0" z="0.45" />
+                        <layers vdp="0,1,2" />
+                    </drawbox>
+
+
+        			<!-- Back side of the tank -->
+                    <setmkbound mk="5" />
+                    <drawbox>
+                        <boxfill>left</boxfill>
+                        <point x="0" y="0.55" z="0" />
+                        <endpoint x="5" y="0.55" z="0.45" />
+                        <layers vdp="0,1,2" />
+                    </drawbox>
+
+
+
+
+
+
 
 
 			        <!--  CYLINDER  -->
@@ -181,7 +221,7 @@
         <special>
             <wavepaddles>
                 <piston_solitary>
-                    <mkbound value="3" comment="Mk-Bound of selected particles" />
+                    <mkbound value="1" comment="Mk-Bound of selected particles" />
                     <theory value="2" comment="Theory of generation 1:Rayleigh (Serre 1953), 2: Boussinesq (Goring 1978) 3: KdV (Clamond and Germain 1999) (def=2)" />
                     <start value="0" comment="Start time (def=0)" />
                     <depth value="0.15" comment="Water depth" />
@@ -341,36 +381,57 @@
     
 
 
-			        <!--  fix these after cylinders are done  -->
+			    <!--  PISTON NORMALS  -->                
                 <boundnormal_plane mkbound="1">
-					<point auto="true" comment="Point is calculated automatically accoding to normal configuration." />
-                    <normal x="0" y="0" z="1" />
-                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
-                </boundnormal_plane>
-
-                <boundnormal_plane mkbound="2">
-					<point auto="true" comment="Point is calculated automatically accoding to normal configuration." />
-                    <normal x="0" y="0" z="-1" />
-                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
-                </boundnormal_plane>
-
-                <boundnormal_plane mkbound="3">
-					<point auto="true" comment="Point is calculated automatically accoding to normal configuration." />
+                    <point x="0" y="0 " z="0.1" />
                     <normal x="1" y="0" z="0" />
                     <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
                 </boundnormal_plane>
+
+
+			    <!--  TANK NORMALS  -->
+			    <!--  LEFT  -->
+                <boundnormal_plane mkbound="2">
+                    <point x="0" y="0.2" z="0.2" />
+                    <normal x="1" y="0" z="0" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_plane>
+
+			    <!--  RIGHT  -->
+                <boundnormal_plane mkbound="3">
+                    <point x="5" y="0.2" z="0.2" />
+                    <normal x="-1" y="0" z="0" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_plane>
+
+			    <!--  FRONT  -->
+                <boundnormal_plane mkbound="4">
+                    <point x="2" y="0" z="0.2" />
+                    <normal x="0" y="1" z="0" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_plane>
+
+			    <!--  BACK  -->
+                <boundnormal_plane mkbound="5">
+                    <point x="2" y="0.55" z="0.2" />
+                    <normal x="0" y="-1" z="0" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_plane>
+
+
 
             </initialize>
         </special>
         <parameters>
             <parameter key="SavePosDouble" value="0" comment="Saves particle position using double precision (default=0)" />
+            <parameter key="Boundary" value="2" comment="Boundary method 1:DBC, 2:mDBC (default=1)" />
             <parameter key="StepAlgorithm" value="2" comment="Step Algorithm 1:Verlet, 2:Symplectic (default=1)" />
             <parameter key="VerletSteps" value="40" comment="Verlet only: Number of steps to apply Euler timestepping (default=40)" />
             <parameter key="Kernel" value="2" comment="Interaction Kernel 1:Cubic Spline, 2:Wendland, 3:Gaussian (default=2)" />
             <parameter key="ViscoTreatment" value="2" comment="Viscosity formulation 1:Artificial, 2:Laminar+SPS (default=1)" />
             <parameter key="Visco" value="0.000001" comment="Viscosity value" />
             <parameter key="ViscoBoundFactor" value="0" comment="Multiply viscosity value with boundary (default=1)" />
-			<parameter key="DensityDT" value="2" comment="Density Diffusion Term 0:None, 1:Molteni, 2:Fourtakas, 3:Fourtakas(full) (default=0)" />
+			<parameter key="DensityDT" value="3" comment="Density Diffusion Term 0:None, 1:Molteni, 2:Fourtakas, 3:Fourtakas(full) (default=0)" />
 			<parameter key="DensityDTvalue" value="0.1" comment="DDT value (default=0.1)" />
             <parameter key="Shifting" value="0" comment="Shifting mode 0:None, 1:Ignore bound, 2:Ignore fixed, 3:Full (default=0)" />
             <parameter key="ShiftCoef" value="-2" comment="Coefficient for shifting computation (default=-2)" />
