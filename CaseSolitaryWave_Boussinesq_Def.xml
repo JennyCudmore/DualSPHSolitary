@@ -41,8 +41,8 @@
                     <setmkbound mk="1" />
                     <drawbox>
                         <boxfill>solid</boxfill> 
-                        <point x="-0.02" y="-1" z="0" />
-                        <size x="0.02" y="2" z="0.8" />
+                        <point x="0.01" y="-1" z="0" />
+                        <size x="0.05" y="2" z="0.8" />
                     </drawbox>
 
 
