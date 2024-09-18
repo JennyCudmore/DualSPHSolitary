@@ -18,7 +18,7 @@
         </mkconfig>
         <geometry>
             <!--gives area where particles are allowed-->
-            <definition dp="0.01" comment="Initial inter-particle distance" units_comment="metres (m)">
+            <definition dp="0.002" comment="Initial inter-particle distance" units_comment="metres (m)">
                 <pointref x="0" y="0" z="0" />
                 <pointmin x="-1" y="-1.1" z="-1" />
                 <pointmax x="6" y="3" z="1" /> 
