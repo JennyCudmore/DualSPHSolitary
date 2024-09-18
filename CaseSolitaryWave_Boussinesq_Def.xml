@@ -56,16 +56,16 @@
                     <drawbox>
                         <boxfill>left</boxfill>
                         <point x="0" y="0" z="0" />
-                        <endpoint x="0.01" y="0.55" z="0.45" />
+                        <endpoint x="0" y="0.55" z="0.45" />
                         <layers vdp="0,1,2" />
                     </drawbox>
 
         			<!-- Right side of the tank -->
                     <setmkbound mk="3" />
                     <drawbox>
-                        <boxfill>left</boxfill>
+                        <boxfill>right</boxfill>
                         <point x="5" y="0" z="0" />
-                        <endpoint x="5.01" y="0.55" z="0.45" />
+                        <endpoint x="5" y="0.55" z="0.45" />
                         <layers vdp="0,1,2" />
                     </drawbox>
 
@@ -73,9 +73,9 @@
         			<!-- Front side of the tank -->
                     <setmkbound mk="4" />
                     <drawbox>
-                        <boxfill>left</boxfill>
+                        <boxfill>front</boxfill>
                         <point x="0" y="0" z="0" />
-                        <endpoint x="5" y="0.01" z="0.45" />
+                        <endpoint x="5" y="0" z="0.45" />
                         <layers vdp="0,1,2" />
                     </drawbox>
 
@@ -83,13 +83,21 @@
         			<!-- Back side of the tank -->
                     <setmkbound mk="5" />
                     <drawbox>
-                        <boxfill>left</boxfill>
+                        <boxfill>back</boxfill>
                         <point x="0" y="0.55" z="0" />
-                        <endpoint x="5" y="0.56" z="0.45" />
+                        <endpoint x="5" y="0.55" z="0.45" />
                         <layers vdp="0,1,2" />
                     </drawbox>
 
 
+                                <!-- Bottom of the tank -->
+                    <setmkbound mk="6" />
+                    <drawbox>
+                        <boxfill>bottom</boxfill>
+                        <point x="0" y="0" z="0" />
+                        <endpoint x="5" y="0.55" z="0" />
+                        <layers vdp="0,1,2" />
+                    </drawbox>
 
 
 
@@ -415,6 +423,13 @@
                 <boundnormal_plane mkbound="5">
                     <point x="2" y="0.55" z="0.2" />
                     <normal x="0" y="-1" z="0" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_plane>
+
+			    <!--  BOTTOM  -->
+                <boundnormal_plane mkbound="6">
+                    <point x="2" y="0.2" z="0" />
+                    <normal x="0" y="0" z="1" />
                     <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
                 </boundnormal_plane>
 
