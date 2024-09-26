@@ -141,7 +141,7 @@
 
             <initialize>
 
-                <boundnormal_cylinder mkbound="0">
+                <boundnormal_cylinder mkbound="24">
                     <center1 x=" 3.5 " y=" 0.5275 " z="0" />
                     <center2 x=" 3.5 " y=" 0.5275 " z="0.45" />
                     <radius v="0.1" />
