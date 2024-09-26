@@ -108,7 +108,6 @@
 		    <drawcylinder radius="0.1">
 		        <point x=" 3.5 " y=" 0.5275 " z="0"/>
        	                <point x=" 3.5 " y=" 0.5275 " z="0.45"/>
-                        <layers vdp="0,1,2" />
 		    </drawcylinder>
                     <setfrdrawmode auto="false" />
 
