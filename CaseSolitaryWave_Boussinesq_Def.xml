@@ -18,7 +18,7 @@
         </mkconfig>
         <geometry>
             <!--gives area where particles are allowed-->
-            <definition dp="0.01" comment="Initial inter-particle distance" units_comment="metres (m)">
+            <definition dp="0.005" comment="Initial inter-particle distance" units_comment="metres (m)">
                 <pointref x="0" y="0" z="0" />
                 <pointmin x="-1" y="-1.1" z="-1" />
                 <pointmax x="6" y="3" z="1" /> 
@@ -102,13 +102,151 @@
 
 
 
+
+
+			        <!--  CYLINDER  -->
+                    <setmkbound mk="7"/>
+                    <setfrdrawmode auto="true" />
+		    <drawcylinder radius="0.005">
+			<point x=" 3.5 " y=" 0.0175 " z="0"/>
+			<point x=" 3.5 " y=" 0.0175 " z="0.45"/>
+                    </drawcylinder>
+
+			        <!--  CYLINDER  -->
+	            <setmkbound mk="8"/>
+                    <setfrdrawmode auto="true" />
+		    <drawcylinder radius="0.005">
+			<point x=" 3.5 " y=" 0.0475 " z="0"/>
+			<point x=" 3.5 " y=" 0.0475 " z="0.45"/>
+                    </drawcylinder>
+
+			        <!--  CYLINDER  -->
+		    <setmkbound mk="9"/>
+                    <setfrdrawmode auto="true" />
+		    <drawcylinder radius="0.005">
+			<point x=" 3.5 " y=" 0.0775 " z="0"/>
+			<point x=" 3.5 " y=" 0.0775 " z="0.45"/>
+                     </drawcylinder>
+
+			        <!--  CYLINDER  -->
+		    <setmkbound mk="10"/>
+                    <setfrdrawmode auto="true" />
+		    <drawcylinder radius="0.005">
+		        <point x=" 3.5 " y=" 0.1075 " z="0"/>
+		        <point x=" 3.5 " y=" 0.1075 " z="0.45"/>
+                     </drawcylinder>
+
+			        <!--  CYLINDER  -->
+		    <setmkbound mk="11"/>
+                    <setfrdrawmode auto="true" />
+		    <drawcylinder radius="0.005">
+		        <point x=" 3.5 " y=" 0.1375 " z="0"/>
+		        <point x=" 3.5 " y=" 0.1375 " z="0.45"/>
+                    </drawcylinder>
+
+			        <!--  CYLINDER  -->
+		    <setmkbound mk="12"/>
+                    <setfrdrawmode auto="true" />
+		    <drawcylinder radius="0.005">
+		        <point x=" 3.5 " y=" 0.16749999999999998 " z="0"/>
+		        <point x=" 3.5 " y=" 0.16749999999999998 " z="0.45"/>
+                    </drawcylinder>
+
+			        <!--  CYLINDER  -->
+  	            <setmkbound mk="13"/>
+                    <setfrdrawmode auto="true" />
+		    <drawcylinder radius="0.005">
+		        <point x=" 3.5 " y=" 0.1975 " z="0"/>
+		        <point x=" 3.5 " y=" 0.1975 " z="0.45"/>
+                     </drawcylinder>
+
+			        <!--  CYLINDER  -->
+		    <setmkbound mk="14"/>
+                    <setfrdrawmode auto="true" />
+		    <drawcylinder radius="0.005">
+		        <point x=" 3.5 " y=" 0.22749999999999998 " z="0"/>
+		        <point x=" 3.5 " y=" 0.22749999999999998 " z="0.45"/>
+                    </drawcylinder>
+
+			        <!--  CYLINDER  -->
+		    <setmkbound mk="15"/>
+                    <setfrdrawmode auto="true" />
+		    <drawcylinder radius="0.005">
+		        <point x=" 3.5 " y=" 0.2575 " z="0"/>
+		        <point x=" 3.5 " y=" 0.2575 " z="0.45"/>
+                    </drawcylinder>
+
+			        <!--  CYLINDER  -->
+		    <setmkbound mk="16"/>
+                    <setfrdrawmode auto="true" />
+		    <drawcylinder radius="0.005">
+		        <point x=" 3.5 " y=" 0.28750000000000003 " z="0"/>
+		        <point x=" 3.5 " y=" 0.28750000000000003 " z="0.45"/>
+                    </drawcylinder>
+
+			        <!--  CYLINDER  -->
+		    <setmkbound mk="17"/>
+                    <setfrdrawmode auto="true" />
+		    <drawcylinder radius="0.005">
+		        <point x=" 3.5 " y=" 0.3175 " z="0"/>
+		        <point x=" 3.5 " y=" 0.3175 " z="0.45"/>
+                    </drawcylinder>
+
+			        <!--  CYLINDER  -->
+		    <setmkbound mk="18"/>
+                    <setfrdrawmode auto="true" />
+		    <drawcylinder radius="0.005">
+		        <point x=" 3.5 " y=" 0.3475 " z="0"/>
+		        <point x=" 3.5 " y=" 0.3475 " z="0.45"/>
+                    </drawcylinder>
+
+			        <!--  CYLINDER  -->
+		    <setmkbound mk="19"/>
+                    <setfrdrawmode auto="true" />
+		    <drawcylinder radius="0.005">
+		        <point x=" 3.5 " y=" 0.3775 " z="0"/>
+		        <point x=" 3.5 " y=" 0.3775 " z="0.45"/>
+                    </drawcylinder>
+
+			        <!--  CYLINDER  -->
+		    <setmkbound mk="20"/>
+                    <setfrdrawmode auto="true" />
+		    <drawcylinder radius="0.005">
+		        <point x=" 3.5 " y=" 0.40750000000000003 " z="0"/>
+		        <point x=" 3.5 " y=" 0.40750000000000003 " z="0.45"/>
+                    </drawcylinder>
+
+			        <!--  CYLINDER  -->
+		    <setmkbound mk="21"/>
+                    <setfrdrawmode auto="true" />
+		    <drawcylinder radius="0.005">
+		        <point x=" 3.5 " y=" 0.4375 " z="0"/>
+		        <point x=" 3.5 " y=" 0.4375 " z="0.45"/>
+                    </drawcylinder>
+
+			        <!--  CYLINDER  -->
+		    <setmkbound mk="22"/>
+                    <setfrdrawmode auto="true" />
+		    <drawcylinder radius="0.005">
+		        <point x=" 3.5 " y=" 0.46749999999999997 " z="0"/>
+		        <point x=" 3.5 " y=" 0.46749999999999997 " z="0.45"/>
+                    </drawcylinder>
+
+			        <!--  CYLINDER  -->
+		    <setmkbound mk="23"/>
+                    <setfrdrawmode auto="true" />
+		    <drawcylinder radius="0.005">
+		        <point x=" 3.5 " y=" 0.4975 " z="0"/>
+		        <point x=" 3.5 " y=" 0.4975 " z="0.45"/>
+                    </drawcylinder>
+
 			        <!--  CYLINDER  -->
 		    <setmkbound mk="24"/>
                     <setfrdrawmode auto="true" />
-		    <drawcylinder radius="0.1">
+		    <drawcylinder radius="0.005">
 		        <point x=" 3.5 " y=" 0.5275 " z="0"/>
-       	                <point x=" 3.5 " y=" 0.5275 " z="0.45"/>
-		    </drawcylinder>
+		        <point x=" 3.5 " y=" 0.5275 " z="0.45"/>
+                    </drawcylinder>
                     <setfrdrawmode auto="false" />
 
                     <shapeout file="" reset="true" />
@@ -139,11 +277,147 @@
 
 
             <initialize>
+                <boundnormal_cylinder mkbound="7">
+                    <center1 x=" 3.5 " y=" 0.0175 " z="0" />
+                    <center2 x=" 3.5 " y=" 0.0175 " z="0.45" />
+                    <radius v="0.005" />
+                    <inside v="true" comment="Boundary particles inside the cylinder" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_cylinder>
+
+                <boundnormal_cylinder mkbound="8">
+                    <center1 x=" 3.5 " y=" 0.0475 " z="0" />
+                    <center2 x=" 3.5 " y=" 0.0475 " z="0.45" />
+                    <radius v="0.005" />
+                    <inside v="true" comment="Boundary particles inside the cylinder" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_cylinder>
+
+ 
+                <boundnormal_cylinder mkbound="9">
+                    <center1 x=" 3.5 " y=" 0.0775 " z="0" />
+                    <center2 x=" 3.5 " y=" 0.0775 " z="0.45" />
+                    <radius v="0.005" />
+                    <inside v="true" comment="Boundary particles inside the cylinder" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_cylinder>
+
+                <boundnormal_cylinder mkbound="10">
+                    <center1 x=" 3.5 " y=" 0.1075 " z="0" />
+                    <center2 x=" 3.5 " y=" 0.1075 " z="0.45" />
+                    <radius v="0.005" />
+                    <inside v="true" comment="Boundary particles inside the cylinder" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_cylinder>
+
+                <boundnormal_cylinder mkbound="11">
+                    <center1 x=" 3.5 " y=" 0.1375 " z="0" />
+                    <center2 x=" 3.5 " y=" 0.1375 " z="0.45" />
+                    <radius v="0.005" />
+                    <inside v="true" comment="Boundary particles inside the cylinder" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_cylinder>
+
+                <boundnormal_cylinder mkbound="12">
+                    <center1 x=" 3.5 " y=" 0.16749999999999998 " z="0" />
+                    <center2 x=" 3.5 " y=" 0.16749999999999998 " z="0.45" />
+                    <radius v="0.005" />
+                    <inside v="true" comment="Boundary particles inside the cylinder" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_cylinder>
+
+                <boundnormal_cylinder mkbound="13">
+                    <center1 x=" 3.5 " y=" 0.1975 " z="0" />
+                    <center2 x=" 3.5 " y=" 0.1975 " z="0.45" />
+                    <radius v="0.005" />
+                    <inside v="true" comment="Boundary particles inside the cylinder" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_cylinder>
+
+                <boundnormal_cylinder mkbound="14">
+                    <center1 x=" 3.5 " y=" 0.22749999999999998 " z="0" />
+                    <center2 x=" 3.5 " y=" 0.22749999999999998 " z="0.45" />
+                    <radius v="0.005" />
+                    <inside v="true" comment="Boundary particles inside the cylinder" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_cylinder>
+
+                <boundnormal_cylinder mkbound="15">
+                    <center1 x=" 3.5 " y=" 0.2575 " z="0" />
+                    <center2 x=" 3.5 " y=" 0.2575 " z="0.45" />
+                    <radius v="0.005" />
+                    <inside v="true" comment="Boundary particles inside the cylinder" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_cylinder>
+
+                <boundnormal_cylinder mkbound="16">
+                    <center1 x=" 3.5 " y=" 0.28750000000000003 " z="0" />
+                    <center2 x=" 3.5 " y=" 0.28750000000000003 " z="0.45" />
+                    <radius v="0.005" />
+                    <inside v="true" comment="Boundary particles inside the cylinder" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_cylinder>
+
+                <boundnormal_cylinder mkbound="17">
+                    <center1 x=" 3.5 " y=" 0.3175 " z="0" />
+                    <center2 x=" 3.5 " y=" 0.3175 " z="0.45" />
+                    <radius v="0.005" />
+                    <inside v="true" comment="Boundary particles inside the cylinder" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_cylinder>
+
+                <boundnormal_cylinder mkbound="18">
+                    <center1 x=" 3.5 " y=" 0.3475 " z="0" />
+                    <center2 x=" 3.5 " y=" 0.3475 " z="0.45" />
+                    <radius v="0.005" />
+                    <inside v="true" comment="Boundary particles inside the cylinder" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_cylinder>
+
+                <boundnormal_cylinder mkbound="19">
+                    <center1 x=" 3.5 " y=" 0.3775 " z="0" />
+                    <center2 x=" 3.5 " y=" 0.3775 " z="0.45" />
+                    <radius v="0.005" />
+                    <inside v="true" comment="Boundary particles inside the cylinder" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_cylinder>
+
+                <boundnormal_cylinder mkbound="20">
+                    <center1 x=" 3.5 " y=" 0.40750000000000003 " z="0" />
+                    <center2 x=" 3.5 " y=" 0.40750000000000003 " z="0.45" />
+                    <radius v="0.005" />
+                    <inside v="true" comment="Boundary particles inside the cylinder" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_cylinder>
+
+                <boundnormal_cylinder mkbound="21">
+                    <center1 x=" 3.5 " y=" 0.4375 " z="0" />
+                    <center2 x=" 3.5 " y=" 0.4375 " z="0.45" />
+                    <radius v="0.005" />
+                    <inside v="true" comment="Boundary particles inside the cylinder" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_cylinder>
+
+                <boundnormal_cylinder mkbound="22">
+                    <center1 x=" 3.5 " y=" 0.46749999999999997 " z="0" />
+                    <center2 x=" 3.5 " y=" 0.46749999999999997 " z="0.45" />
+                    <radius v="0.005" />
+                    <inside v="true" comment="Boundary particles inside the cylinder" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_cylinder>
+
+                <boundnormal_cylinder mkbound="23">
+                    <center1 x=" 3.5 " y=" 0.4975 " z="0" />
+                    <center2 x=" 3.5 " y=" 0.4975 " z="0.45" />
+                    <radius v="0.005" />
+                    <inside v="true" comment="Boundary particles inside the cylinder" />
+                    <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
+                </boundnormal_cylinder>
 
                 <boundnormal_cylinder mkbound="24">
                     <center1 x=" 3.5 " y=" 0.5275 " z="0" />
                     <center2 x=" 3.5 " y=" 0.5275 " z="0.45" />
-                    <radius v="0.1" />
+                    <radius v="0.005" />
                     <inside v="true" comment="Boundary particles inside the cylinder" />
                     <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
                 </boundnormal_cylinder>
@@ -152,7 +426,7 @@
 
 			    <!--  PISTON NORMALS  -->                
                 <boundnormal_plane mkbound="1">
-					<point auto="true" comment="Point is calculated automatically accoding to normal configuration." />
+		    <point auto="true" comment="Point is calculated automatically accoding to normal configuration." />
                     <normal x="1" y="0" z="0" />
                     <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
                 </boundnormal_plane>
@@ -161,35 +435,35 @@
 			    <!--  TANK NORMALS  -->
 			    <!--  LEFT  -->
                 <boundnormal_plane mkbound="2">
-					<point auto="true" comment="Point is calculated automatically accoding to normal configuration." />
+		    <point auto="true" comment="Point is calculated automatically accoding to normal configuration." />
                     <normal x="1" y="0" z="0" />
                     <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
                 </boundnormal_plane>
 
 			    <!--  RIGHT  -->
                 <boundnormal_plane mkbound="3">
-					<point auto="true" comment="Point is calculated automatically accoding to normal configuration." />
+		    <point auto="true" comment="Point is calculated automatically accoding to normal configuration." />
                     <normal x="-1" y="0" z="0" />
                     <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
                 </boundnormal_plane>
 
 			    <!--  FRONT  -->
                 <boundnormal_plane mkbound="4">
-					<point auto="true" comment="Point is calculated automatically accoding to normal configuration." />
+		    <point auto="true" comment="Point is calculated automatically accoding to normal configuration." />
                     <normal x="0" y="1" z="0" />
                     <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
                 </boundnormal_plane>
 
 			    <!--  BACK  -->
                 <boundnormal_plane mkbound="5">
-					<point auto="true" comment="Point is calculated automatically accoding to normal configuration." />
+		    <point auto="true" comment="Point is calculated automatically accoding to normal configuration." />
                     <normal x="0" y="-1" z="0" />
                     <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
                 </boundnormal_plane>
 
 			    <!--  BOTTOM  -->
                 <boundnormal_plane mkbound="6">
-					<point auto="true" comment="Point is calculated automatically accoding to normal configuration." />
+		    <point auto="true" comment="Point is calculated automatically accoding to normal configuration." />
                     <normal x="0" y="0" z="1" />
                     <maxdisth v="2.0" comment="Maximum distance to boundary limit. It uses H*maxdisth (default=2)" />
                 </boundnormal_plane>
@@ -207,8 +481,8 @@
             <parameter key="ViscoTreatment" value="2" comment="Viscosity formulation 1:Artificial, 2:Laminar+SPS (default=1)" />
             <parameter key="Visco" value="0.000001" comment="Viscosity value" />
             <parameter key="ViscoBoundFactor" value="0" comment="Multiply viscosity value with boundary (default=1)" />
-			<parameter key="DensityDT" value="3" comment="Density Diffusion Term 0:None, 1:Molteni, 2:Fourtakas, 3:Fourtakas(full) (default=0)" />
-			<parameter key="DensityDTvalue" value="0.1" comment="DDT value (default=0.1)" />
+	    <parameter key="DensityDT" value="3" comment="Density Diffusion Term 0:None, 1:Molteni, 2:Fourtakas, 3:Fourtakas(full) (default=0)" />
+	    <parameter key="DensityDTvalue" value="0.1" comment="DDT value (default=0.1)" />
             <parameter key="Shifting" value="0" comment="Shifting mode 0:None, 1:Ignore bound, 2:Ignore fixed, 3:Full (default=0)" />
             <parameter key="ShiftCoef" value="-2" comment="Coefficient for shifting computation (default=-2)" />
             <parameter key="ShiftTFS" value="0" comment="Threshold to detect free surface. Typically 1.5 for 2D and 2.75 for 3D (default=0)" />
