@@ -56,22 +56,13 @@ export tracerparts="${dirbin}/TracerParts_linux64"
 
 
 
-option=-1
- if [ -e $dirout ]; then
- while [ "$option" != 1 -a "$option" != 2 -a "$option" != 3 -a "$option" != 4 ]
- do
+#CHOOSE YOUR PATH
+#  [1]- Delete it and continue.
+#  [2]- Execute post-processing.
+#  [3]- Abort and exit.
+#  [4]- Continue from specified part
 
-	echo -e "The folder "${dirout}" already exists. Choose an option.
-  [1]- Delete it and continue.
-  [2]- Execute post-processing.
-  [3]- Abort and exit.
-  [4]- Continue from specified part
-"
- read -n 1 option 
- done 
-  else 
-   option=1 
-fi 
+option=1
 
 if [ $option -eq 1 ]; then
 # "dirout" to store results is removed if it already exists
