@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #SBATCH --job-name=DualGPUscaling       # Job name
-#SBATCH --time=3-00:00:00               # Time limit (DD-HH:MM:SS)
+#SBATCH --time=0-04:00:00               # Time limit (DD-HH:MM:SS)
 #SBATCH --partition=gpuplus                 # H100 GPU
 #SBATCH --nodes=1                       # Number of nodes
 #SBATCH --gres=gpu:1                    # 1 card
@@ -56,13 +56,14 @@ export tracerparts="${dirbin}/TracerParts_linux64"
 
 
 
-#CHOOSE YOUR PATH
+#CHOOSE YOUR PATH - REMEMBER POST PRO AFTER FIRST SIM
 #  [1]- Delete it and continue.
 #  [2]- Execute post-processing.
 #  [3]- Abort and exit.
 #  [4]- Continue from specified part
+#  [5]- Run measuretool
 
-option=1
+option=5
 
 if [ $option -eq 1 ]; then
 # "dirout" to store results is removed if it already exists
@@ -75,7 +76,7 @@ if [ -e ${dirout} ]; then rm -r ${dirout}; fi
 ${gencase} ${name}_Def ${dirout}/${name} -save:all
 if [ $? -ne 0 ] ; then fail; fi
 
-${dualsphysicsgpu} -gpu ${dirout}/${name} ${dirout} -dirdataout data -svres -partbegin:144 ${diroutdata}
+${dualsphysicsgpu} -gpu ${dirout}/${name} ${dirout} -dirdataout data -svres
 if [ $? -ne 0 ] ; then fail; fi
 
 fi
@@ -84,7 +85,7 @@ fi
 #FOR RESTART
 if [ $option -eq 4 ]; then
 # Executes DualSPHysics to simulate SPH method.
-${dualsphysicsgpu} -gpu ${dirout}/${name} ${dirout} -dirdataout data -svres -partbegin:13 ${diroutdata}
+${dualsphysicsgpu} -gpu ${dirout}/${name} ${dirout} -dirdataout data -svres -partbegin:331 ${diroutdata}
 if [ $? -ne 0 ] ; then fail; fi
 
 fi
@@ -102,28 +103,38 @@ if [ $? -ne 0 ] ; then fail; fi
 #${partvtkout} -dirin ${diroutdata} -savevtk ${dirout2}/PartFluidOut -SaveResume ${dirout2}/_ResumeFluidOut
 #if [ $? -ne 0 ] ; then fail; fi
 
-export dirout2=${dirout}/measuretool
-${measuretool} -dirin ${diroutdata} -points wg_x81.txt -onlytype:-all,+fluid -elevation -savecsv ${dirout2}/eta_x81
-if [ $? -ne 0 ] ; then fail; fi
-
-export dirout2=${dirout}/measuretool
-${measuretool} -dirin ${diroutdata} -points wg_x82.txt -onlytype:-all,+fluid -elevation -savecsv ${dirout2}/eta_x82
-if [ $? -ne 0 ] ; then fail; fi
-
-export dirout2=${dirout}/measuretool
-${measuretool} -dirin ${diroutdata} -points wg_x83.txt -onlytype:-all,+fluid -elevation -savecsv ${dirout2}/eta_x83
-if [ $? -ne 0 ] ; then fail; fi
-
-
-export dirout2=${dirout}/measuretool
-${measuretool} -dirin ${diroutdata} -points wg_hx.txt -onlytype:-all,+fluid -elevation -savecsv ${dirout2}/eta_full -elevationoutput:pos -files:200-300:50
-if [ $? -ne 0 ] ; then fail; fi
 
 export dirout2=${dirout}/surface
 ${isosurface} -dirin ${diroutdata} -saveslice ${dirout2}/Slices 
 if [ $? -ne 0 ] ; then fail; fi
 
+
 fi
+
+
+
+
+
+#FOR MEASURETOOL
+if [ $option -eq 5 ]; then
+
+
+export dirout2=${dirout}/measuretool
+${measuretool} -dirin ${diroutdata} -first:0 -points wg_x81.txt -onlytype:-all,+fluid -elevation -savecsv ${dirout2}/eta_x81
+if [ $? -ne 0 ] ; then fail; fi
+
+export dirout2=${dirout}/measuretool
+${measuretool} -dirin ${diroutdata} -first:0 -points wg_x82.txt -onlytype:-all,+fluid -elevation -savecsv ${dirout2}/eta_x82
+if [ $? -ne 0 ] ; then fail; fi
+
+export dirout2=${dirout}/measuretool
+${measuretool} -dirin ${diroutdata} -first:0 -points wg_x83.txt -onlytype:-all,+fluid -elevation -savecsv ${dirout2}/eta_x83
+if [ $? -ne 0 ] ; then fail; fi
+
+
+fi
+
+
 if [ $option != 3 ];then
  echo All done
  else
