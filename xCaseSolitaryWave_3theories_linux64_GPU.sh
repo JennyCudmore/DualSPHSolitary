@@ -19,7 +19,8 @@ export diroutdata=${dirout}/data
 
 export dirbin=../../../bin/linux
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${dirbin}
-export gencase="${dirbin}/GenCase_linux64"
+#export gencase="${dirbin}/GenCase_linux64"
+export gencaseMkWord="${dirbin}/GenCase_MkWord_linux64"
 export dualsphysicscpu="${dirbin}/DualSPHysics5.2CPU_linux64"
 export dualsphysicsgpu="${dirbin}/DualSPHysics5.2_linux64"
 export boundaryvtk="${dirbin}/BoundaryVTK_linux64"
@@ -54,7 +55,7 @@ if [ -e ${dirout} ]; then rm -r ${dirout}; fi
 
 # CODES are executed according the selected parameters of execution in this testcase
 
-${gencase} ${name}_Def ${dirout}/${name} -save:all
+${gencaseMkWord} ${name}_Def ${dirout}/${name} -save:all
 if [ $? -ne 0 ] ; then fail; fi
 
 ${dualsphysicsgpu} -gpu ${dirout}/${name} ${dirout} -dirdataout data -svres
