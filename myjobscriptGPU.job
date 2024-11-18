@@ -1,0 +1,144 @@
+#!/usr/bin/env bash
+#SBATCH --job-name=DualGPUscaling       # Job name
+#SBATCH --time=0-04:00:00               # Time limit (DD-HH:MM:SS)
+#SBATCH --partition=gpuplus                 # H100 GPU
+#SBATCH --nodes=1                       # Number of nodes
+#SBATCH --gres=gpu:1                    # 1 card
+#SBATCH --mem=100G                      # Total memory to request
+#SBATCH --ntasks=1                      # Number of MPI tasks to request
+#SBATCH --cpus-per-task=1               # Number of CPU cores per MPI task
+#SBATCH --account=env-tsunami-2019      # Project account to use
+#SBATCH --mail-type=END,FAIL            # Mail events (NONE, BEGIN, END, FAIL, ALL)
+#SBATCH --mail-user=xkg506@york.ac.uk   # Where to send mail
+#SBATCH --output=%x-%j.log              # Standard output log
+#SBATCH --error=%x-%j.err               # Standard error log
+
+# Abort if any command fails
+set -e
+
+# Purge any previously loaded modules
+module purge
+
+# Load modules
+module load DualSPHysics/5.0.175-GCC-11.2.0
+
+# Commands to run
+
+# "name" and "dirout" are named according to the testcase
+
+# change "name" according to the theory you want to simulate
+# export name=CaseSolitaryWave_Rayleigh
+export name=CaseSolitaryWave_Boussinesq
+# export name=CaseSolitaryWave_KdV
+export dirout=${name}_out
+export diroutdata=${dirout}/data
+
+# "executables" are renamed and called from their directory
+
+#export dirbin=../../../bin/linux
+export dirbin=/opt/apps/eb/software/DualSPHysics/5.0.175-GCC-11.2.0/bin/
+export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${dirbin}
+export gencase="${dirbin}/GenCase_linux64"
+export dualsphysicscpu="${dirbin}/DualSPHysics5.0CPU_linux64"
+#export dualsphysicscpu="${dirbin}/DualSPHysics5.2CPU_linux64"
+#export dualsphysicsgpu="${dirbin}/DualSPHysics5.2_linux64"
+export dualsphysicscpu="/opt/apps/eb/software/DualSPHysics/5.0.175-GCC-11.2.0/bin/DualSPHysics5.0CPU_linux64"
+export dualsphysicsgpu="/opt/apps/eb/software/DualSPHysics/5.0.175-GCC-11.2.0-CUDA-11.4.1/bin/DualSPHysics5.0_linux64"
+export boundaryvtk="${dirbin}/BoundaryVTK_linux64"
+export partvtk="${dirbin}/PartVTK_linux64"
+export partvtkout="${dirbin}/PartVTKOut_linux64"
+export measuretool="${dirbin}/MeasureTool_linux64"
+export computeforces="${dirbin}/ComputeForces_linux64"
+export isosurface="${dirbin}/IsoSurface_linux64"
+export flowtool="${dirbin}/FlowTool_linux64"
+export floatinginfo="${dirbin}/FloatingInfo_linux64"
+export tracerparts="${dirbin}/TracerParts_linux64"
+
+
+
+#CHOOSE YOUR PATH - REMEMBER POST PRO AFTER FIRST SIM
+#  [1]- Delete it and continue.
+#  [2]- Execute post-processing.
+#  [3]- Abort and exit.
+#  [4]- Continue from specified part
+#  [5]- Run measuretool
+
+option=5
+
+if [ $option -eq 1 ]; then
+# "dirout" to store results is removed if it already exists
+if [ -e ${dirout} ]; then rm -r ${dirout}; fi
+
+
+
+# CODES are executed according the selected parameters of execution in this testcase
+
+${gencase} ${name}_Def ${dirout}/${name} -save:all
+if [ $? -ne 0 ] ; then fail; fi
+
+${dualsphysicsgpu} -gpu ${dirout}/${name} ${dirout} -dirdataout data -svres
+if [ $? -ne 0 ] ; then fail; fi
+
+fi
+
+
+#FOR RESTART
+if [ $option -eq 4 ]; then
+# Executes DualSPHysics to simulate SPH method.
+${dualsphysicsgpu} -gpu ${dirout}/${name} ${dirout} -dirdataout data -svres -partbegin:331 ${diroutdata}
+if [ $? -ne 0 ] ; then fail; fi
+
+fi
+
+
+
+if [ $option -eq 2 -o $option -eq 1 -o $option -eq 4 ]; then
+export dirout2=${dirout}/particles
+${partvtk} -dirin ${diroutdata} -savevtk ${dirout2}/PartFLuid -onlytype:-all,+fluid
+if [ $? -ne 0 ] ; then fail; fi
+
+${partvtk} -dirin ${diroutdata} -savevtk ${dirout2}/PartPiston -onlytype:-all,+moving
+if [ $? -ne 0 ] ; then fail; fi
+
+#${partvtkout} -dirin ${diroutdata} -savevtk ${dirout2}/PartFluidOut -SaveResume ${dirout2}/_ResumeFluidOut
+#if [ $? -ne 0 ] ; then fail; fi
+
+
+export dirout2=${dirout}/surface
+${isosurface} -dirin ${diroutdata} -saveslice ${dirout2}/Slices 
+if [ $? -ne 0 ] ; then fail; fi
+
+
+fi
+
+
+
+
+
+#FOR MEASURETOOL
+if [ $option -eq 5 ]; then
+
+
+export dirout2=${dirout}/measuretool
+${measuretool} -dirin ${diroutdata} -first:0 -points wg_x81.txt -onlytype:-all,+fluid -elevation -savecsv ${dirout2}/eta_x81
+if [ $? -ne 0 ] ; then fail; fi
+
+export dirout2=${dirout}/measuretool
+${measuretool} -dirin ${diroutdata} -first:0 -points wg_x82.txt -onlytype:-all,+fluid -elevation -savecsv ${dirout2}/eta_x82
+if [ $? -ne 0 ] ; then fail; fi
+
+export dirout2=${dirout}/measuretool
+${measuretool} -dirin ${diroutdata} -first:0 -points wg_x83.txt -onlytype:-all,+fluid -elevation -savecsv ${dirout2}/eta_x83
+if [ $? -ne 0 ] ; then fail; fi
+
+
+fi
+
+
+if [ $option != 3 ];then
+ echo All done
+ else
+ echo Execution aborted
+fi
+
+read -n1 -r -p "Press any key to continue..." key
