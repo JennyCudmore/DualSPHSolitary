@@ -17,7 +17,7 @@ export diroutdata=${dirout}/data
 
 # "executables" are renamed and called from their directory
 
-export dirbin=../../../bin/linux
+export dirbin=../../bin/linux
 export LD_LIBRARY_PATH=${LD_LIBRARY_PATH}:${dirbin}
 #export gencase="${dirbin}/GenCase_linux64"
 export gencaseMkWord="${dirbin}/GenCase_MkWord_linux64"
