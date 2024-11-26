@@ -13,7 +13,7 @@
             <hdp value="2.0" comment="Alternative option to calculate the smoothing length (h=hdp*dp)" />
             <cflnumber value="0.2" comment="Coefficient to multiply dt" />
         </constantsdef>
-        <mkconfig boundcount="230" fluidcount="9">
+        <mkconfig boundcount="340" fluidcount="9">
             <mkorientfluid mk="0" orient="Xyz" />
         </mkconfig>
         <geometry>
