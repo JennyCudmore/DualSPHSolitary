@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-#SBATCH --job-name=DualGPUscaling       # Job name
-#SBATCH --time=0-04:00:00               # Time limit (DD-HH:MM:SS)
-#SBATCH --partition=gpuplus                 # H100 GPU
+#SBATCH --job-name=DualGPUAllcyl	# Job name
+#SBATCH --time=0-00:20:00               # Time limit (DD-HH:MM:SS)
+#SBATCH --partition=gpuplus             # H100 GPU
 #SBATCH --nodes=1                       # Number of nodes
 #SBATCH --gres=gpu:1                    # 1 card
 #SBATCH --mem=100G                      # Total memory to request
@@ -20,7 +20,7 @@ set -e
 module purge
 
 # Load modules
-module load DualSPHysics/5.0.175-GCC-11.2.0
+ml load DualSPHysics/5.0.175-GCC-11.2.0-CODE_SIZE4
 
 # Commands to run
 
@@ -64,7 +64,7 @@ export tracerparts="${dirbin}/TracerParts_linux64"
 #  [4]- Continue from specified part
 #  [5]- Run measuretool
 
-option=5
+option=1
 
 if [ $option -eq 1 ]; then
 # "dirout" to store results is removed if it already exists
